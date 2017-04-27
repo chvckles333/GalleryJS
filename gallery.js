@@ -22,6 +22,8 @@ function shuffleGallery()
   while(index == current) {
     index = Math.floor(Math.random() * chico.length);
   }
-  console.log(chico[index]);
+  document.getElementById("picture").src=chico[index].picture;
+  document.getElementById("caption").innerHTML=chico[index].description;
+  document.getElementById("source").innerHTML= "Image courtesy of: " + chico[index].from;
   current = index;
 }
